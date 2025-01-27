@@ -14,7 +14,7 @@ local function random_teleport(player)
         candidates[#candidates + 1] = planet.name
         ::continue::
     end
-    if #candidates == 0 then
+    if #candidates == 0 or on_planet ~= true then
         player.print({"random-teleport-no-planet"})
         return
     end
