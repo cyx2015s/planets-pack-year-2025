@@ -8,7 +8,7 @@ local function random_teleport(player)
             goto continue
         end
         if planet.prototype.hidden then goto continue end -- deal with trench
-        if planet.surface.name == "nauvis" and
+        if planet.name == "nauvis" and
             player.force.technologies["planet-discovery-nauvis"].researched ==
             false then goto continue end -- deal with lignumis mod
         candidates[#candidates + 1] = planet.name
