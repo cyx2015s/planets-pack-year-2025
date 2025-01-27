@@ -1,0 +1,17 @@
+{
+    "name": "planets-pack-year-2025",
+    "version": "0.0.1",
+    "factorio_version": "2.0",
+    "title": "行星模组合集（服务器用）",
+    "author": "tanvec, hnclstok",
+    "description": "YOU SHOULD NOT DOWNLOAD THIS MOD UNLESS YOU FIND A SERVER THAT REQUIRE IT! 服务器专用模组！",
+    "dependencies": [
+        "base >= 2.0.0",
+        "space-age >= 2.0.0",
+        "maraxsis >= 1.27.0",
+        "planet-muluna >= 1.16.0",
+        "Cerys-Moon-of-Fulgora >= 1.0.0",
+        "lignumis >= 1.0.0",
+        "corrundum >= 1.0.0"
+    ]
+}
