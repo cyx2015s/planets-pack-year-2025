@@ -90,7 +90,7 @@ script.on_event(defines.events.on_cutscene_started, function(event)
 end)
 
 
-commands.add_command("fix_cutsene", {"fix-cutsene-help"}, (function (event)
+commands.add_command("fix_cutscene", {"fix-cutscene-help"}, (function (event)
     for _, player in pairs(game.players) do
         if player.gui.screen.skip_cutscene_label then
             player.gui.screen.skip_cutscene_label.destroy()
