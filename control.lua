@@ -69,9 +69,7 @@ script.on_event(defines.events.on_player_joined_game, (function(event)
     game.print({"server-welcome", player.name})
 end))
 
-local function starts_with(str, start)
-    return str:sub(1, #start) == start
-end
+local function starts_with(str, start) return str:sub(1, #start) == start end
 
 script.on_event(defines.events.on_cutscene_started, function(event)
     local player_index = event.player_index
@@ -79,22 +77,32 @@ script.on_event(defines.events.on_cutscene_started, function(event)
     player = game.get_player(player_index)
     if player_index == 1 then return end
     player.exit_cutscene()
+    player.character.destructible = true
     local surface = player.surface
     local names = {}
     local entities = surface.find_entities({{-100, -100}, {100, 100}})
     for _, entity in pairs(entities) do
-        if starts_with(entity.name, "crash-site") then
-            entity.destroy()
-        end
+        if starts_with(entity.name, "crash-site") then entity.destroy() end
     end
 end)
 
-
-commands.add_command("fix_cutscene", {"fix-cutscene-help"}, (function (event)
+commands.add_command("fix_cutscene", {"fix-cutscene-help"}, (function(event)
     for _, player in pairs(game.players) do
+        if player.gui.screen.skip_cutscene_label then
+            player.gui.screen.skip_cutscene_label.destroy()
+        end
+        player.character.destructible = true
+    end
+end))
+
+events.on_nth_tick(60 * 60, (function(event)
+    for _, player in pairs(game.players) do
+        if player.character == nil then return end
+        if player.character.destructible == false then
+            player.character.destructible = true
+        end
         if player.gui.screen.skip_cutscene_label then
             player.gui.screen.skip_cutscene_label.destroy()
         end
     end
 end))
-
