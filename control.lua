@@ -68,3 +68,33 @@ script.on_event(defines.events.on_player_joined_game, (function(event)
     random_teleport(player)
     game.print({"server-welcome", player.name})
 end))
+
+local function starts_with(str, start)
+    return str:sub(1, #start) == start
+end
+
+script.on_event(defines.events.on_cutscene_started, function(event)
+    local player_index = event.player_index
+    if player_index == nil then return end
+    player = game.get_player(player_index)
+    if player_index == 1 then return end
+    player.exit_cutscene()
+    local surface = player.surface
+    local names = {}
+    local entities = surface.find_entities({{-100, -100}, {100, 100}})
+    for _, entity in pairs(entities) do
+        if starts_with(entity.name, "crash-site") then
+            entity.destroy()
+        end
+    end
+end)
+
+
+commands.add_command("fix_cutsene", {"fix-cutsene-help"}, (function (event)
+    for _, player in pairs(game.players) do
+        if player.gui.screen.skip_cutscene_label then
+            player.gui.screen.skip_cutscene_label.destroy()
+        end
+    end
+end))
+
