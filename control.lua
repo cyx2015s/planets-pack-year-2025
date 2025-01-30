@@ -88,7 +88,7 @@ end)
 
 commands.add_command("fix_cutscene", {"fix-cutscene-help"}, (function(event)
     for _, player in pairs(game.players) do
-        if player.character == nil the goto continue
+        if player.character == nil then goto continue end
         if player.gui.screen.skip_cutscene_label then
             player.gui.screen.skip_cutscene_label.destroy()
         end
