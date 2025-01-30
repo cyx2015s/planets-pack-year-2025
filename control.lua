@@ -88,16 +88,21 @@ end)
 
 commands.add_command("fix_cutscene", {"fix-cutscene-help"}, (function(event)
     for _, player in pairs(game.players) do
+        if player.character == nil the goto continue
         if player.gui.screen.skip_cutscene_label then
             player.gui.screen.skip_cutscene_label.destroy()
         end
-        player.character.destructible = true
+        if player.character ~= nil then
+            player.character.destructible = true
+            
+        end
     end
+    ::continue::
 end))
 
-events.on_nth_tick(60 * 60, (function(event)
+script.on_nth_tick(60 * 60, (function(event)
     for _, player in pairs(game.players) do
-        if player.character == nil then return end
+        if player.character == nil then goto continue end
         if player.character.destructible == false then
             player.character.destructible = true
         end
@@ -105,4 +110,5 @@ events.on_nth_tick(60 * 60, (function(event)
             player.gui.screen.skip_cutscene_label.destroy()
         end
     end
+    ::continue::
 end))
