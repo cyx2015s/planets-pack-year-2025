@@ -63,6 +63,7 @@ script.on_init(function() storage.last_teleport_time = {} end)
 
 script.on_event(defines.events.on_player_joined_game, (function(event)
     local player = game.players[event.player_index]
+    player.print({"command-hint", 30})
     if #game.players == 1 then return end -- skip the first player
     if storage.last_teleport_time[player.name] then return end -- skip if already played once
     random_teleport(player)

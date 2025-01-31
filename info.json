@@ -1,17 +1,17 @@
 {
     "name": "planets-pack-year-2025",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "factorio_version": "2.0",
-    "title": "行星模组合集（服务器用）",
+    "title": "星球杂烩",
     "author": "tanvec, hnclstok",
-    "description": "YOU SHOULD NOT DOWNLOAD THIS MOD UNLESS YOU FIND A SERVER THAT REQUIRE IT! 服务器专用模组！",
+    "description": "A set of planets mods for tanvec's server. You can also download these mods to play yourself, but will not be balanced. Use /random_teleport to get to a random planet that is unlocked. Use /fix_cutscene to fix bugs related to cutscenes.",
     "dependencies": [
         "base >= 2.0.0",
         "space-age >= 2.0.0",
-        "maraxsis >= 1.27.0",
-        "planet-muluna >= 1.16.0",
+        "maraxsis >= 1.28.0",
+        "planet-muluna >= 1.17.0",
         "Cerys-Moon-of-Fulgora >= 1.0.0",
-        "lignumis >= 1.0.0",
+        "lignumis >= 1.0.5",
         "corrundum >= 1.0.0"
     ]
 }
