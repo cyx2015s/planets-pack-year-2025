@@ -4,7 +4,7 @@
     "factorio_version": "2.0",
     "title": "星球杂烩",
     "author": "tanvec, hnclstok",
-    "description": "A set of planets mods for tanvec's server. You can also download these mods to play yourself, but will not be balanced. Use /random_teleport to get to a random planet that is unlocked. Use /fix_cutscene to fix bugs related to cutscenes.",
+    "description": "A set of planets mods for tanvec's server. You can also download these mods to play yourself, but will not be balanced. Use /random_teleport to get to a random planet that is unlocked. Use /fix_cutscene to fix bugs related to cutscenes. Go to mod portal page for more info. ",
     "dependencies": [
         "base >= 2.0.0",
         "space-age >= 2.0.0",
