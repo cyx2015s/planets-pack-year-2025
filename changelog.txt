@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2025-02-01
+  Minor:
+    - Restored recycling recipe of low density structure and rocket fuel (Another lignumis bug)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2025-01-31
   Bugfixes:
