@@ -43,3 +43,7 @@ for _, tree in pairs(data.raw.tree) do
         tree.minable.result = nil
     end
 end
+
+if data.raw["fluid"]["carbon-dioxide"] then
+    data.raw["fluid"]["carbon-dioxide"].max_temperature = 3000
+end -- patch here so players don't have to redownload the planet-muluna mod.
