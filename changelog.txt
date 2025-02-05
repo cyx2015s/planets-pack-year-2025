@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2025-02-05
+  Minor Features:
+    - Raised version of dependency lignumis to 1.0.9
+    - Restored modifications to trees and recycling recipes, as lignumis did that already
+---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2025-02-02
   Compatibility:
@@ -6,12 +12,12 @@ Date: 2025-02-02
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2025-02-01
-  Minor:
+  Bugfixes:
     - Restored tree minable result that initially don't drop wood.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2025-02-01
-  Minor:
+  Bugfixes:
     - Restored recycling recipe of low density structure and rocket fuel (Another lignumis bug)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
@@ -38,5 +44,5 @@ Date: 2025-01-28
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 2025-01-27
-  Major:
+  Major Features:
     - Publish

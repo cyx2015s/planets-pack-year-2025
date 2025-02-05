@@ -1,6 +1,6 @@
 {
     "name": "planets-pack-year-2025",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "factorio_version": "2.0",
     "title": "星球杂烩",
     "author": "tanvec, hnclstok",
@@ -11,7 +11,7 @@
         "maraxsis >= 1.28.0",
         "planet-muluna >= 1.16.19",
         "Cerys-Moon-of-Fulgora >= 1.0.0",
-        "lignumis >= 1.0.5",
+        "lignumis >= 1.0.9",
         "corrundum >= 1.0.0"
     ]
 }
